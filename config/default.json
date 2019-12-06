@@ -1,0 +1,10 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "dbUrl": "mongodb://root:bbmq2rKVXiye8Z@ds257241.mlab.com:57241/cycler-prod",
+  "auth": {
+    "audience": "cycler-api",
+    "auth0Domain": "kozzztya.auth0.com"
+  }
+}
