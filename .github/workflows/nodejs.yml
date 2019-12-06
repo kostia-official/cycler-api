@@ -3,7 +3,7 @@ name: Node CI
 on:
   push:
     branches:
-    - master
+    - test-ci
 
 jobs:
   build:
@@ -28,6 +28,7 @@ jobs:
         CI: true
     - name: deploy
       run: |
+        echo $AWS_ACCESS_KEY_ID
         npx sls deploy -s prod 
  
  
