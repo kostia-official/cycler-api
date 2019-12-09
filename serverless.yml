@@ -5,12 +5,14 @@ provider:
   region: eu-west-1
   memorySize: 256
   timeout: 30
+  logs:
+    restApi: true
   environment:
     DB_URL: ${ssm:cycler-db-url-${opt:stage}}
     NODE_ENV: production
 custom:
   contentEncoding:
-    contentCompression: 100
+    contentCompression: false
   scripts:
     hooks:
       'before:deploy:deploy': |
@@ -32,3 +34,4 @@ functions:
           cors: false
 plugins:
   - serverless-plugin-scripts # To run predeploy scripts
+  - serverless-api-compression # To use gzip
