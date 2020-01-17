@@ -27,11 +27,11 @@ functions:
       - http:
           method: ANY
           path: '{proxy+}'
-          cors: false
+          cors: true
       - http:
           method: ANY
           path: /
-          cors: false
+          cors: true
 plugins:
   - serverless-plugin-scripts # To run predeploy scripts
   - serverless-api-compression # To use gzip
